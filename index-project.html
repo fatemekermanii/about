@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure{
+            width: 600px;
+            height: 300px;
+            /* border: 2px solid rgb(240, 172, 216); */
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 0 30px 30px 0;
+            &::after{
+                content: '';
+                display: flex;
+                width: 100%;
+                height: 100%;
+                /* background-color: #a5386042; */
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 1s;
+            }
+            &:hover{
+                &:hover{
+                    .box{
+                        bottom: 30px;
+                        opacity: 1;
+                    }
+                }
+                &::after{
+                    background-color:#a5386042 ;
+                }
+                >img{
+                    top: -5%;
+                }
+                >h2{
+                    bottom: 160px;
+                }
+            }
+            >h2{
+                width: 60%;
+                color: #533B4D;
+                font-size: 40px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                text-transform: capitalize;
+                transition: 1s;
+                z-index: 2;
+            }
+            >img{
+                width: 100%;
+                height: 105%;
+                object-fit: cover;
+                transition: 1s;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .box{
+                width: 60%;
+                height: 140px;
+                /* border: 2px solid red; */
+                position: absolute;
+                bottom: -150px;
+                right: 0;
+                z-index: 4;
+                opacity: 0;
+                transition: 1s;
+                >figcaption{
+                    padding: 15px;
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                    font-size: 18px;
+                    font-style: italic;
+                    color: aliceblue;
+                    text-align: center;
+
+                }
+                >a{
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    width: 120px;
+                    height: 40px;
+                    background-color: #533B4D;
+                    color: white;
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                    border-radius: 5px;
+                }
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="img/pic4.avif" alt="">
+        <h2>about me</h2>
+        <div class="box">
+            <figcaption>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, consequatur.</figcaption>
+            <a href="">Resume</a>
+        </div>
+    </figure>
+</body>
+</html>
